@@ -9,7 +9,7 @@
     <AssemblyOriginatorKeyFile>..\..\AutoMapper.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    <PackageId>AutoMapper.MIT</PackageId>
+    <PackageId>AutoMapper-MIT</PackageId>
     <PackageIcon>icon.png</PackageIcon>
     <PackageProjectUrl>https://github.com/smg-bg/AutoMapper.MIT</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>

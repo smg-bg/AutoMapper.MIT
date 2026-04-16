@@ -1,4 +1,8 @@
 # Taken from psake https://github.com/psake/psake
+param(
+    [string]$ArtifactsDir = ".\artifacts",
+    [switch]$SkipTests
+)
 
 <#
 .SYNOPSIS
@@ -22,10 +26,10 @@ function Exec
     }
 }
 
-$artifacts = ".\artifacts"
+if(Test-Path $ArtifactsDir) { Remove-Item $ArtifactsDir -Force -Recurse }
 
-if(Test-Path $artifacts) { Remove-Item $artifacts -Force -Recurse }
+if (-not $SkipTests) {
+    exec { & dotnet test -c Release --results-directory $ArtifactsDir -l trx }
+}
 
-exec { & dotnet test -c Release --results-directory $artifacts -l trx }
-
-exec { & dotnet pack .\src\AutoMapper\AutoMapper.csproj -c Release -o $artifacts --no-build }
+exec { & dotnet pack .\src\AutoMapper\AutoMapper.csproj -c Release -o $ArtifactsDir --no-build }

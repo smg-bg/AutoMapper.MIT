@@ -28,6 +28,8 @@ function Exec
 
 if(Test-Path $ArtifactsDir) { Remove-Item $ArtifactsDir -Force -Recurse }
 
+exec { & dotnet build -c Release }
+
 if (-not $SkipTests) {
     exec { & dotnet test -c Release --results-directory $ArtifactsDir -l trx }
 }

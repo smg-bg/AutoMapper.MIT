@@ -28,6 +28,9 @@ public class DropCreateDatabaseAlways<TContext> : IInitializer where TContext : 
 public abstract class LocalDbContext : DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlServer(
-        @$"Data Source=localhost,1433;User Id=sa;Password=CHANGE_ME!;MultipleActiveResultSets=True;Database={GetType()};Connection Timeout=300;TrustServerCertificate=True",
+        // Original connection string for LocalDB
+        // @"Data Source=(localdb)\mssqllocaldb;Integrated Security=True;MultipleActiveResultSets=True;Database={GetType()};Connection Timeout=300",
+        // Example connection string for SQL Server in Docker
+        @$"Data Source=localhost,1433;User Id=sa;Password=Change_Me!;MultipleActiveResultSets=True;Database={GetType()};Connection Timeout=300;TrustServerCertificate=True",
         o => o.EnableRetryOnFailure(maxRetryCount: 10).CommandTimeout(120));
 }

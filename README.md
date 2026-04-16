@@ -6,6 +6,14 @@
 [![Documentation Status](https://readthedocs.org/projects/automapper/badge/?version=stable)](https://docs.automapper.org/en/stable/?badge=stable)
 
 
+### What is AutoMapper.MIT?
+
+This repository is a fork of the latest version of AutoMapper 14.x that was released with MIT license. As of version >15.x the library went to a dual license - Community and Paid. The transtition was done for a good reason, however the Community license is not a clean MIT license and it does not fit my client's requirements. 
+
+This repo is NOT going to be maintained for long time and will NOT bring any changes from the AutoMapper public repository. It is meant to include only high severity vulnerability patches and/or framework migrations for the time my codebase is moved to another library. 
+
+I know it is a pitty, but after all it's not about the cost that we could easily pay, but the license that we can't accept.
+
 ### What is AutoMapper?
 
 AutoMapper is a simple little library built to solve a deceptively complex problem - getting rid of code that mapped one object to another. This type of code is rather dreary and boring to write, so why not invent a tool to do it for us?

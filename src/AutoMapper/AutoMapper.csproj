@@ -9,12 +9,12 @@
     <AssemblyOriginatorKeyFile>..\..\AutoMapper.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    <PackageId>AutoMapper</PackageId>
+    <PackageId>AutoMapper.MIT</PackageId>
     <PackageIcon>icon.png</PackageIcon>
-    <PackageProjectUrl>https://automapper.org</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/smg-bg/AutoMapper.MIT</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
 
-    <MinVerDefaultPreReleaseIdentifiers>preview.0</MinVerDefaultPreReleaseIdentifiers>
+    <MinVerDefaultPreReleaseIdentifiers>pre.0</MinVerDefaultPreReleaseIdentifiers>
     <MinVerTagPrefix>v</MinVerTagPrefix>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
